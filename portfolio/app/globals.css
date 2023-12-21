@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+@layer components {
+  abbr {
+    @apply underline decoration-neutral-400 underline-offset-1 decoration-dotted;
+  }
+
+  main:not(.project) {
+    @apply w-full flex flex-col gap-16 mt-[8rem] lg:mt-[13rem] lg:gap-32 px-6 lg:px-20 max-w-[80rem];
+  }
+
+  main.project {
+    @apply px-6 gap-12 lg:gap-16 max-w-full flex items-center flex-col mt-[8rem] lg:mt-[13rem];
+  }
+
+  main.project section {
+    @apply w-full max-w-[80rem] lg:px-20;
+  }
+
+  li {
+    @apply text-neutral-400;
+  }
+
+  .phone-link {
+    @apply text-neutral-300 underline underline-offset-2 hover:text-orange-300 focus:text-orange-300;
+  }
+
+  p {
+    @apply max-w-3xl text-neutral-300 leading-relaxed pb-4;
+  }
+
+  .large-title {
+    @apply text-4xl md:text-5xl xl:text-6xl font-semibold bg-gradient-to-b from-white to-neutral-400 inline-block text-transparent bg-clip-text pb-2 md:pb-4 lg:pb-6 tracking-tighter;
+  }
+
+  .title-1 {
+    @apply text-3xl xl:text-4xl font-semibold bg-gradient-to-b from-neutral-200 to-neutral-300 inline-block text-transparent bg-clip-text pb-4 tracking-tighter;
+  }
+
+  .title-1-no-gradient {
+    @apply text-3xl xl:text-4xl font-medium tracking-tight;
+  }
+
+  .title-2 {
+    @apply text-2xl xl:text-3xl font-semibold bg-gradient-to-b from-neutral-200 to-neutral-300 inline-block text-transparent bg-clip-text pb-3 tracking-tighter;
+  }
+
+  .title-3 {
+    @apply text-xl xl:text-2xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-300 inline-block text-transparent bg-clip-text pb-3 tracking-tighter;
+  }
+
+  .title-4 {
+    @apply text-lg xl:text-xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-300 inline-block text-transparent bg-clip-text pb-2 tracking-tighter;
+  }
+
+  .title-5 {
+    @apply text-lg xl:text-lg font-bold bg-gradient-to-b from-neutral-200 to-neutral-300 inline-block text-transparent bg-clip-text pb-2 tracking-tighter;
+  }
+
+  .headline {
+    @apply text-sm font-medium text-neutral-400;
+  }
+
+  .lead {
+    @apply leading-relaxed text-lg;
+  }
+
+  .lead-2 {
+    @apply text-base;
+  }
+
+  .body-text {
+  }
+
+  .icon-link {
+    @apply text-neutral-200 hover:text-orange-400 focus:text-orange-400 focus:scale-125 transition-colors;
+  }
+
+  .chip {
+    @apply bg-neutral-800 w-fit py-1 px-3 rounded-full text-sm text-neutral-300;
+  }
+
+  .chip-with-img {
+    @apply bg-neutral-800/60 w-fit inline-flex gap-3 items-center flex-wrap flex-row py-1 pl-3 pr-4 rounded-lg text-sm text-neutral-300;
+  }
+
+  nav a.link {
+    @apply text-sm font-medium text-neutral-200 hover:text-orange-400 focus:text-orange-400 focus:scale-1025 transition-colors;
+  }
+
+  .document-link {
+    @apply text-xs uppercase tracking-widest text-neutral-400 hover:text-neutral-200 max-w-[80rem];
+  }
+
+  .divider {
+    @apply h-[0.0625rem] w-full bg-gradient-to-r from-neutral-950 via-neutral-800 to-neutral-950 max-w-[80rem];
+  }
+
+  ul li.award, ul li span.award {
+    @apply font-medium text-neutral-300;
+  }
+
+  .testimonial-column {
+    @apply md:grid md:grid-cols-2 xl:block gap-4 xl:gap-8;
+  }
+}
